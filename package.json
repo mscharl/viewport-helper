@@ -1,0 +1,40 @@
+{
+    "name": "msc-viewport-helper",
+    "version": "0.0.0",
+    "description": "A css-only helper to show the currently active viewport.",
+    "sass": "viewport-helper.scss",
+    "scripts": {
+        "prettier": "prettier -c **/*.scss .prettierrc .stylelintrc LICENSE **/*.md package.json",
+        "stylelint": "stylelint **/*.scss"
+    },
+    "engines": {
+        "node": ">=16",
+        "npm": ">=8"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mscharl/viewport-helper.git"
+    },
+    "keywords": [
+        "SCSS",
+        "Viewport",
+        "Responsive",
+        "Helper"
+    ],
+    "author": "Michael Scharl",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mscharl/viewport-helper/issues"
+    },
+    "homepage": "https://github.com/mscharl/viewport-helper#readme",
+    "devDependencies": {
+        "prettier": "^2.7.1",
+        "stylelint": "^14.9.1",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended-scss": "^6.0.0",
+        "stylelint-scss": "^4.2.0"
+    },
+    "files": [
+        "**/*.scss"
+    ]
+}
