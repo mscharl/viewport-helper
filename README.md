@@ -22,7 +22,7 @@ Set the breakpoint variable in your variables file.
 $viewport-helper-breakpoints: $breakpoints;
 ```
 
-Your Breakpoint map should look like this.
+Your Breakpoint map should look like this. And make sure that the breakpoints are sorted by size.
 
 ```scss
 $breakpoints: (
