@@ -13,8 +13,8 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm stylelint
-      - run: npm prettier
+      - run: npm run stylelint
+      - run: npm run prettier
 
   publish-npm:
     needs: test
