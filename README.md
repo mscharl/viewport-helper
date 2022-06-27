@@ -47,7 +47,7 @@ To enable the viewport helper you need to set the `$viewport-helper-enabled` var
 }
 ```
 
-If you are using `sass-loader < 9` you need to use the property `prependData` instead. 
+If you are using `sass-loader < 9` you need to use the property `prependData` instead.
 
 ## Used By
 
