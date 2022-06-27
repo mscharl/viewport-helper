@@ -1,7 +1,5 @@
-@use 'sass:map';
-
 @mixin viewport-helper($breakpoints, $config: ()) {
-    $config: map.merge(
+    $config: map-merge(
         (
             'backgroundColor': #36f5cf,
             'foregroundColor': #007272,
@@ -15,12 +13,12 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: map.get($config, 'zIndex');
+            z-index: map-get($config, 'zIndex');
 
             padding: 0.375em 0.625em;
-            color: map.get($config, 'foregroundColor');
-            background-color: map.get($config, 'backgroundColor');
-            border: 1px solid map.get($config, 'foregroundColor');
+            color: map-get($config, 'foregroundColor');
+            background-color: map-get($config, 'backgroundColor');
+            border: 1px solid map-get($config, 'foregroundColor');
 
             font-size: 0.8rem;
             font-family: monospace;
