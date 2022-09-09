@@ -10,16 +10,14 @@ Install via your preferred package manager.
 npm install --save msc-viewport-helper
 ```
 
-Include the helper in your main scss file.
+Create a helper file that includes and renders the viewport helper:
 
 ```scss
-@import '~msc-viewport-helper';
-```
+@use '~msc-viewport-helper' as helper;
 
-Set the breakpoint variable in your variables file.
-
-```scss
 $viewport-helper-breakpoints: $breakpoints;
+
+@include helper.viewport-helper($breakpoints);
 ```
 
 Your Breakpoint map should look like this. And make sure that the breakpoints are sorted by size.
@@ -35,19 +33,17 @@ $breakpoints: (
 );
 ```
 
-To enable the viewport helper you need to set the `$viewport-helper-enabled` variable to `true`. When using Webpack you can automate this by [injecting the scss variable](https://webpack.js.org/loaders/sass-loader/#additionaldata):
+To enable the viewport helper you need to include the created helper file to your compiler settings. You also may want to only do this when _not_ building for production.
 
 ```js
 {
-    loader: 'sass-loader',
-    options: {
-        sourceMap: true,
-        additionalData: isProduction ? '' : '$viewport-helper-enabled: true;',
-    },
+    entry: {
+        main: ['./src/js/main.js', './src/scss/main.scss'].concat(
+            isProduction ? [] : ['./src/scss/viewport-helper.scss']
+        );
+    }
 }
 ```
-
-If you are using `sass-loader < 9` you need to use the property `prependData` instead.
 
 ## Used By
 

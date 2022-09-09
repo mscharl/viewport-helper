@@ -1,6 +1,6 @@
 {
     "name": "msc-viewport-helper",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "A css-only helper to show the currently active viewport.",
     "sass": "viewport-helper.scss",
     "scripts": {
